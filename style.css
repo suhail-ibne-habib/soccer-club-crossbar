@@ -1,0 +1,236 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg: #F2F4F8;
+    --red: #EC3F80;
+    --sub-text: #818CA1;
+    --text: #3A4661;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+.container{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+.team-info-wrapper{
+    position: relative;
+    margin-top: 100px;
+}
+
+.team-info-wrapper .date-wrap{
+    width: 200px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+.team-info-wrapper .date-wrap .date{
+    color: var(--sub-text);
+    font-size: 20px;
+}
+
+.team-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+}
+
+.team-info .pro{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--sub-text);
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-info .mid-side{
+    display: flex;
+    justify-content: center;
+}
+
+.team-info .mid-side .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-info .mid-side .time .unit{
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.team-info .mid-side .time .hour{
+    color: var(--red);
+}
+
+.team-info .mid-side .time .colon{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.team-info .mid-side .time .colon::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 30px;
+    background-image: linear-gradient( 180deg, black 20%, white 20%, white 80%, black 80%, black 100% );
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.team-info .pro img{
+    object-fit: cover;
+}
+
+/*--Player info--*/
+.player-info{
+    height: 300px;
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.player-info .left-side{
+    width: 50%;
+}
+
+.player-info .left-side .player-name{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.player-info .left-side .position{
+    color: var(--red);
+}
+
+.player-info .right-side{
+    width: 50%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.player-info .right-side img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.players-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+    margin-top: 50px;
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+
+.players-list .player-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgba( 0, 0, 0, 0.1 );
+}
+
+.players-list .player-list .pos{
+    color: var(--sub-text);
+}
+
+.players-list .player-list .name{
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.players-list .player-list.clickable .name{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.players-list .player-list .position{
+    color: var(--sub-text);
+}
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (max-width: 600px) {
+
+    .team-info{
+        grid-template-columns: 1fr;
+    }
+
+    .player-info{
+        flex-direction: column;
+    }
+
+    .player-info .left-side{
+        width: 100%;
+        text-align: center;
+    }
+
+    .player-info .right-side{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 992px) {
+
+}
